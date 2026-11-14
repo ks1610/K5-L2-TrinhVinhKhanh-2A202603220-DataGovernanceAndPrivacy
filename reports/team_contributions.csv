@@ -1,6 +1,2 @@
 member,git_author_name,git_email,role,modules_files,commit_shas,evidence_note,presenter
-Member 1,,,Lead / Integrator,src/main.py; configs/,,,
-Member 2,,,Data & fixtures,fixtures/; tools/,,,
-Member 3,,,Core algorithm,src/pipeline.py,,,
-Member 4,,,QA / metric,tests/; reports/metrics_*.json,,,
-Member 5,,,Human review + report,reports/group_report.md; demo/,,,
+Trịnh Vinh Khánh (Làm cá nhân / Solo),ks1610,trinhvinhkhanh1610@gmail.com,Tích hợp hệ thống; Dữ liệu & GT nội bộ; Thuật toán lõi; Kiểm thử & Đánh giá; Duyệt HITL & Báo cáo,"configs/lab.yaml; src/baseline_t08.py; src/pipeline.py; tests/test_t08_pipeline.py; reports/*","117cd8a; eacb9ce; e52ad44; HEAD","Thực hiện cá nhân toàn bộ bài lab T08: cấu hình hệ thống, cài đặt baseline và PoC truy vết lineage bằng BFS kèm nhật ký kiểm toán HITL, viết 3 unit test, đánh giá nội bộ và hoàn thiện báo cáo",Không
