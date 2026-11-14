@@ -1,0 +1,24 @@
+rank,item_id,score,reason,suggested_action,slice,evidence_path,reviewer,reviewer_decision,override_value,review_note,reviewed_at
+1,DR-001:a0212,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,"training_export dùng chung nhiều subject — cần ticket kỹ thuật riêng để ẩn danh một phần, không xoá cả file.",2026-11-14T20:00:00+07:00
+2,DR-002:a0043,1.0,LEGAL_HOLD,,,,Trịnh Vinh Khánh,approve,,Xác nhận giữ nguyên theo legal hold đang hiệu lực.,2026-11-14T20:00:00+07:00
+3,DR-002:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+4,DR-003:a0067,1.0,MULTI_SUBJECT,,,reviewer_confirmation,Trịnh Vinh Khánh,edit,delete,Subject còn lại trên artefact đã được xử lý xoá riêng trước đó — xác nhận an toàn để xoá.,2026-11-14T20:00:00+07:00
+5,DR-003:a0070,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,escalate,,Cần xác minh thêm danh sách subject trên artefact trước khi quyết định.,2026-11-14T20:00:00+07:00
+6,DR-003:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+7,DR-003:a0212,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+8,DR-004:a0075,1.0,UNKNOWN_ORIGIN,,,reviewer_confirmation,Trịnh Vinh Khánh,edit,delete,"Xác minh thủ công nguồn gốc qua manifest — hợp lệ, cho phép xoá.",2026-11-14T20:00:00+07:00
+9,DR-004:a0079,1.0,UNKNOWN_ORIGIN,,,,Trịnh Vinh Khánh,escalate,,"Chưa xác minh được nguồn gốc, cần thêm hồ sơ bổ sung.",2026-11-14T20:00:00+07:00
+10,DR-004:a0083,1.0,UNKNOWN_ORIGIN,,,reviewer_confirmation,Trịnh Vinh Khánh,edit,delete,"Xác minh thủ công nguồn gốc qua manifest — hợp lệ, cho phép xoá.",2026-11-14T20:00:00+07:00
+11,DR-004:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+12,DR-004:a0212,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+13,DR-005:a0099,1.0,LEGAL_HOLD,,,,Trịnh Vinh Khánh,approve,,Xác nhận giữ nguyên theo legal hold đang hiệu lực.,2026-11-14T20:00:00+07:00
+14,DR-005:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+15,DR-005:a0212,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+16,DR-006:a0123,1.0,MULTI_SUBJECT,,,reviewer_confirmation,Trịnh Vinh Khánh,edit,delete,Subject còn lại đã có yêu cầu xoá riêng — xác nhận an toàn để xoá.,2026-11-14T20:00:00+07:00
+17,DR-006:a0126,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,escalate,,Cần xác minh thêm danh sách subject trên artefact trước khi quyết định.,2026-11-14T20:00:00+07:00
+18,DR-007:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+19,DR-008:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+20,DR-009:a0179,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,escalate,,Cần xác minh thêm danh sách subject trên artefact trước khi quyết định.,2026-11-14T20:00:00+07:00
+21,DR-009:a0182,1.0,MULTI_SUBJECT,,,reviewer_confirmation,Trịnh Vinh Khánh,edit,delete,Subject còn lại đã có yêu cầu xoá riêng — xác nhận an toàn để xoá.,2026-11-14T20:00:00+07:00
+22,DR-009:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00
+23,DR-010:a0211,1.0,MULTI_SUBJECT,,,,Trịnh Vinh Khánh,skip,,training_export dùng chung — xem ghi chú DR-001:a0212.,2026-11-14T20:00:00+07:00

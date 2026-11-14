@@ -1,0 +1,11 @@
+{
+  "status": "HOLD",
+  "reason_code": "PENDING_EXCEPTIONS",
+  "reason": "16 artefacts require escalation",
+  "owner": "Trịnh Vinh Khánh",
+  "scope": "t08",
+  "evidence": [],
+  "metrics": {},
+  "ts": "2026-11-14T17:45:07+00:00",
+  "canonical": "HOLD"
+}
