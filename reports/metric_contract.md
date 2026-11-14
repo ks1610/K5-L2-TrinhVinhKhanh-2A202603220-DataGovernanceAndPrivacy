@@ -5,21 +5,27 @@
 
 
 
-
 | Mục | Khai báo của nhóm |
 |---|---|
 | Track | T08 |
 | Primary metric | Deletion Completeness |
-| Tăng tốt hay giảm tốt? | higher |
-| ơn vị đánh giá (image / region / pair / release / batch / case …) | case (mỗi delete request = 1 case) |
-| Công thức + numerator/denominator | Deletion Completeness = (số bản ghi/trường thuộc phạm vi request đã bị xoá đúng) / (tổng số bản ghi/trường phải xoá theo request); tính per-case rồi lấy trung bình trên toàn bộ request |
-| Cách ghép prediction ↔ GT | theo `record_id`/`request_id` khớp chính xác (exact match, không IoU) |
-| Candidate pool cố định | toàn bộ delete requests trong `fixtures/t08/` (không lọc/bớt) |
-| Review budget B / K | theo `configs/tracks/t08.yaml` (cần đọc giá trị thực tế trong file này) |
+| Tăng tốt hay giảm tốt? | Higher |
+| Đơn vị đánh giá | Request–artefact pair (`request_id`, `artefact_id`) |
+| Công thức | Số cặp có `expected_action = delete` và `predicted action = delete` / Tổng số cặp có `expected_action = delete` |
+| Cách ghép prediction ↔ GT | Exact match theo `request_id` và `artefact_id` |
+| Candidate pool | Toàn bộ 10 delete requests trong `fixtures/t08_deletion/` và các artefact trong `data_graph.json` |
+| Review budget B | 20 |
 | Seed | 42 |
-| Threshold policy | không dùng threshold xác suất; quyết định dựa rule cứng: completeness < 1.0 → HOLD/REWORK; bất kỳ false-delete > 0 → fail guardrail, chốt trước khi chạy eval, không đổi sau |
-| Eval split | toàn bộ `fixtures/t08/` dùng làm heldout, không dùng để tune pipeline |
-| Chỉ số lỗi xấu | miss = bản ghi còn sót chưa xoá; false alarm = false-delete (xoá nhầm bản ghi ngoài phạm vi); false reject = từ chối nhầm request hợp lệ |
-| Slices sẽ báo cáo (≥2) | (1) theo loại request (xoá toàn bộ vs xoá một phần); (2) theo quy mô phạm vi xoá (ít bản ghi vs nhiều bản ghi) |
-| Cách báo độ bất định khi N nhỏ | bootstrap CI |
-| Ngày giờ chốt + người chốt | _[điền ngày giờ thực tế + tên bạn]_ |
+| Threshold policy | Không sử dụng threshold xác suất. Quyết định dựa trên policy rules: legal hold > permission > multi-subject > delete |
+| False-delete guardrail | False-delete count = 0 |
+| Eval split | Toàn bộ các cặp trong GT `gt_actions.csv` theo evaluator T08; không tự lọc hoặc thay đổi tập đánh giá |
+| Miss | Artefact có expected action là delete nhưng không được dự đoán delete |
+| False alarm | Artefact thuộc exception bị dự đoán delete hoặc artefact bị delete ngoài phạm vi request |
+| False reject | Request hợp lệ không được xử lý đầy đủ; báo cáo bổ sung nếu có dữ liệu kiểm chứng |
+| Slices chính thức | Theo `expected_action`: delete, retain_legal_hold, escalate |
+| Slices bổ sung | Theo quy mô phạm vi xử lý của request, nếu có dữ liệu và phương pháp phân nhóm được xác định trước |
+| Độ bất định | Evaluator chuẩn T08 không tính bootstrap CI. Báo cáo numerator, denominator và số lượng mẫu; chỉ bổ sung CI khi có dữ liệu đánh giá được phép sử dụng |
+| Ngày giờ chốt | 2026-11-14 22:29 (UTC+7) |
+| Người chốt | Trịnh Vinh Khánh |
+
+Nếu baseline = 0 thì ghi rõ "baseline = 0" thay vì phần trăm cải thiện.
