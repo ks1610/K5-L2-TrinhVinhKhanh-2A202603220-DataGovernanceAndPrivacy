@@ -44,7 +44,7 @@
 - **Schema & class mapping:**
   - `data_graph.json`: `id`/`artefact_id`, `type`, `subject_ids`, `parent_ids`, `uri`, `owner`, `acl`, `legal_hold`, `origin_known`.
   - `requests.json`: `request_id` (`DR-001`..`DR-010`), `subject_id`, `received_at`, `deadline`.
-  - `actions.csv`: ánh xạ `(request_id, artefact_id)` sang `action` $\in \{\text{delete}, \text{retain\_legal\_hold}, \text{escalate}\}$ kèm `reason`, `artefact_type`, `score`.
+  - `actions.csv`: ánh xạ `(request_id, artefact_id)` sang `action` thuộc `{delete, retain_legal_hold, escalate}` kèm `reason`, `artefact_type`, `score`.
 - **Seed & Cách chia split:** Cố định `seed: 42`. Trong `fixtures/t08_deletion/manifest.csv`, trường `split` có giá trị `na` (dùng chung cho toàn bộ simulator; tập `gt/` đánh giá chính thức nằm ở overlay giảng viên).
 - **`manifest.csv` verified (sha256):** Đã xác minh qua `strict_provenance: true` và `make verify`:
   - `data_graph.json`: `53c2bd968209e7c73a89a593a7c932edcef2cd03ea218f34a7ad873c7e9c9f2e`
