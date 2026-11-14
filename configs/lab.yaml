@@ -3,7 +3,7 @@
 # the track defaults loaded from `track_config`.
 # ============================================================
 group_id: "Cá nhân"                     # e.g. G07
-owner: "TODO: Trịnh Vinh Khánh"   # mandatory for every Decision
+owner: "Trịnh Vinh Khánh"
 track_config: tracks/t08.yaml     # pick your challenge: tracks/t01.yaml ... tracks/t14.yaml
 track: t08                        # must match track_config
 input: fixtures/t08_deletion      # or data/real/... if your instructor provided a real pack
@@ -15,4 +15,4 @@ strict_provenance: true           # fail if manifest.csv hashes do not match
 # Track params (merged over track_config.params). Freeze before evaluation.
 # params: {}
 params:
-  budget: 20
+  budget: 30
